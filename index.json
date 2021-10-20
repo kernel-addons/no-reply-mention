@@ -1,0 +1,6 @@
+{
+	"name": "No Reply Mention",
+	"id": "no-reply-mention",
+	"description": "Don't automatically mention in replies, show button in dms.",
+	"dependencies": []
+}
