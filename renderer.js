@@ -1,9 +1,9 @@
 import Patcher from "./patcher.js";
-import Webpack from "./webpack.js";
+import Webpack, {Events} from "./webpack.js";
 
 export default new class NoReplyMention {
-    start() {Webpack.wait(() => this.onStart());}
-
+    start() {Webpack.once(Events.LOADED, () => this.onStart());}
+    
     onStart() {
         const ReplyActions = Webpack.findByProps("createPendingReply");
        
